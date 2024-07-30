@@ -10,15 +10,6 @@ class BasePost(BaseModel):
 class CreatePost(BasePost):
     pass
 
-class Post(BasePost):
-
-    class Config:
-        orm_mode = True
-
-class CreateUser(BaseModel):
-    email: EmailStr
-    password: str
-
 class UserOut(BaseModel):
     id: int
     email: EmailStr
@@ -26,6 +17,18 @@ class UserOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+class Post(BasePost):
+    id: int
+    created_at: datetime
+    user: UserOut
+
+    class Config:
+        orm_mode = True
+
+class CreateUser(BaseModel):
+    email: EmailStr
+    password: str
 
 class UserLogin(BaseModel):
     email: EmailStr
@@ -37,3 +40,4 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     id: Optional[int] = None
+
