@@ -46,7 +46,6 @@ def get_latest_post(db: Session = Depends(get_db), user:models.User = Depends(oa
 def get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):
     # cur = conn.cursor(row_factory=dict_row)
     # required_post = cur.execute("""SELECT * FROM posts WHERE id = %s """, (str(id),)).fetchone()
-    print(user.email)
     required_post = db.query(models.Post).filter(models.Post.id == id).first()
     if required_post == None:
         raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= f"The post with id: {id} is not found")
