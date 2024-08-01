@@ -136,6 +136,54 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -173,6 +221,14 @@
         "isExtraImport": true,
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
         "detail": "sqlalchemy.orm",
         "documentation": {}
     },
@@ -386,6 +442,14 @@
         "documentation": {}
     },
     {
+        "label": "conint",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -518,6 +582,24 @@
         "documentation": {}
     },
     {
+        "label": "vote",
+        "kind": 2,
+        "importPath": "app.routers.votes",
+        "description": "app.routers.votes",
+        "peekOfCode": "def vote(vote: schemas.Vote, db: Session = Depends(get_db), user: models.User = Depends(oath2.get_current_user)):\n    post = db.query(models.Post).filter(models.Post.id == vote.post_id).first()\n    if not post:\n        raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= \"Post does not exist\")\n    vote_query = db.query(models.Vote).filter(models.Vote.post_id == vote.post_id, models.Vote.user_id == user.id)\n    found_vote = vote_query.first()\n    if(vote.dir == 1):\n        if found_vote:\n            raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail= f\"User {user.id} has already voted on post {vote.post_id}\")\n        new_vote = models.Vote(post_id = vote.post_id, user_id = user.id)",
+        "detail": "app.routers.votes",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.votes",
+        "description": "app.routers.votes",
+        "peekOfCode": "router = APIRouter(\n    tags=[\"Votes\"],\n    prefix=\"/vote\"\n)\n@router.post(\"/\", status_code=status.HTTP_201_CREATED)\ndef vote(vote: schemas.Vote, db: Session = Depends(get_db), user: models.User = Depends(oath2.get_current_user)):\n    post = db.query(models.Post).filter(models.Post.id == vote.post_id).first()\n    if not post:\n        raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= \"Post does not exist\")\n    vote_query = db.query(models.Vote).filter(models.Vote.post_id == vote.post_id, models.Vote.user_id == user.id)",
+        "detail": "app.routers.votes",
+        "documentation": {}
+    },
+    {
         "label": "Settings",
         "kind": 6,
         "importPath": "app.config",
@@ -585,7 +667,7 @@
         "kind": 2,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "def get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)",
+        "peekOfCode": "def get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)\napp.include_router(votes.router)",
         "detail": "app.main",
         "documentation": {}
     },
@@ -594,7 +676,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)\napp.include_router(votes.router)",
         "detail": "app.main",
         "documentation": {}
     },
@@ -612,7 +694,16 @@
         "kind": 6,
         "importPath": "app.models",
         "description": "app.models",
-        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, nullable= False)\n    email = Column(String, nullable=False, unique=True)\n    password = Column(String, nullable= False)\n    created_at = Column(TIMESTAMP(timezone=True), server_default= text('now()'), nullable= False)",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, nullable= False)\n    email = Column(String, nullable=False, unique=True)\n    password = Column(String, nullable= False)\n    created_at = Column(TIMESTAMP(timezone=True), server_default= text('now()'), nullable= False)\nclass Vote(Base):\n    __tablename__ = \"votes\"\n    user_id = Column(Integer, ForeignKey(\"users.id\", ondelete= \"CASCADE\"), primary_key= True)\n    post_id = Column(Integer, ForeignKey(\"posts.id\", ondelete= \"CASCADE\"), primary_key= True)",
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Vote(Base):\n    __tablename__ = \"votes\"\n    user_id = Column(Integer, ForeignKey(\"users.id\", ondelete= \"CASCADE\"), primary_key= True)\n    post_id = Column(Integer, ForeignKey(\"posts.id\", ondelete= \"CASCADE\"), primary_key= True)",
         "detail": "app.models",
         "documentation": {}
     },
@@ -729,7 +820,7 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class UserLogin(BaseModel):\n    email: EmailStr\n    password: str\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None",
+        "peekOfCode": "class UserLogin(BaseModel):\n    email: EmailStr\n    password: str\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int",
         "detail": "app.schemas",
         "documentation": {}
     },
@@ -738,7 +829,7 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
         "detail": "app.schemas",
         "documentation": {}
     },
@@ -747,7 +838,16 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class TokenData(BaseModel):\n    id: Optional[int] = None",
+        "peekOfCode": "class TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
+        "detail": "app.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Vote",
+        "kind": 6,
+        "importPath": "app.schemas",
+        "description": "app.schemas",
+        "peekOfCode": "class Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
         "detail": "app.schemas",
         "documentation": {}
     },
