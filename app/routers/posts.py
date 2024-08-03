@@ -3,18 +3,22 @@ from .. import models, schemas, utils, oath2
 from sqlalchemy.orm import Session
 from ..database import get_db
 from typing import Optional, List
+from sqlalchemy import func
 
 router = APIRouter(
     prefix= "/posts",
     tags=["Posts"]
 )
 
-@router.get("/", response_model=List[schemas.Post])
+@router.get("/", response_model=List[schemas.PostOut])
 def get_posts(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user), limit: int = 10, skip: int = 0, search: Optional[str] = ""):
     # cur = conn.cursor(row_factory=dict_row)
     # posts = cur.execute("""SELECT * FROM posts""").fetchall()
-    posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
-    return posts
+    
+    # posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
+
+    result = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True).group_by(models.Post.id).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()
+    return result
 
 
 @router.post("/", status_code= status.HTTP_201_CREATED, response_model= schemas.Post)
@@ -42,11 +46,12 @@ def get_latest_post(db: Session = Depends(get_db), user:models.User = Depends(oa
 
 
 
-@router.get("/{id}", response_model= schemas.Post)
+@router.get("/{id}", response_model= schemas.PostOut)
 def get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):
     # cur = conn.cursor(row_factory=dict_row)
     # required_post = cur.execute("""SELECT * FROM posts WHERE id = %s """, (str(id),)).fetchone()
-    required_post = db.query(models.Post).filter(models.Post.id == id).first()
+    required_post = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True).group_by(models.Post.id).filter(models.Post.id == id).first()
+    print(db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True))
     if required_post == None:
         raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= f"The post with id: {id} is not found")
     return required_post

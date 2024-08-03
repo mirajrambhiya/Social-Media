@@ -1,5 +1,166 @@
 [
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "engine_from_config",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.models",
+        "description": "app.models",
+        "isExtraImport": true,
+        "detail": "app.models",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.config",
+        "description": "app.config",
+        "isExtraImport": true,
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -281,30 +442,6 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "BaseSettings",
         "importPath": "pydantic_settings",
         "description": "pydantic_settings",
@@ -322,59 +459,19 @@
         "documentation": {}
     },
     {
-        "label": "create_engine",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Integer",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "String",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Boolean",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "ForeignKey",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
         "label": "declarative_base",
         "importPath": "sqlalchemy.ext.declarative",
         "description": "sqlalchemy.ext.declarative",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
         "documentation": {}
     },
     {
@@ -474,6 +571,60 @@
         "documentation": {}
     },
     {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "description": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('users',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('email', sa.String(), nullable=False),\n    sa.Column('password', sa.String(), nullable=False),\n    sa.Column('created_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('now()'), nullable=False),\n    sa.PrimaryKeyConstraint('id'),\n    sa.UniqueConstraint('email')\n    )",
+        "detail": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "description": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table('votes')\n    op.drop_table('posts')\n    op.drop_table('users')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.30c0396b588d_create_the_posts_users_and_votes_tables",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_online() -> None:\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    connectable = engine_from_config(\n        config.get_section(config.config_ini_section, {}),\n        prefix=\"sqlalchemy.\",\n        poolclass=pool.NullPool,\n    )",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "config = context.config\nconfig.set_main_option('sqlalchemy.url', f'postgresql+psycopg://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}')\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_metadata",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
         "label": "user_login",
         "kind": 2,
         "importPath": "app.routers.auth",
@@ -496,7 +647,7 @@
         "kind": 2,
         "importPath": "app.routers.posts",
         "description": "app.routers.posts",
-        "peekOfCode": "def get_posts(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user), limit: int = 10, skip: int = 0, search: Optional[str] = \"\"):\n    # cur = conn.cursor(row_factory=dict_row)\n    # posts = cur.execute(\"\"\"SELECT * FROM posts\"\"\").fetchall()\n    posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()\n    return posts\n@router.post(\"/\", status_code= status.HTTP_201_CREATED, response_model= schemas.Post)\ndef create_posts(post:schemas.CreatePost, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # post_created = cur.execute(\"\"\"INSERT INTO posts (title, content, published) VALUES (%s, %s, %s) RETURNING *\"\"\",(post.title,post.content,post.published)).fetchone()\n    # conn.commit()",
+        "peekOfCode": "def get_posts(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user), limit: int = 10, skip: int = 0, search: Optional[str] = \"\"):\n    # cur = conn.cursor(row_factory=dict_row)\n    # posts = cur.execute(\"\"\"SELECT * FROM posts\"\"\").fetchall()\n    # posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()\n    result = db.query(models.Post, func.count(models.Vote.post_id).label(\"votes\")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True).group_by(models.Post.id).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()\n    return result\n@router.post(\"/\", status_code= status.HTTP_201_CREATED, response_model= schemas.Post)\ndef create_posts(post:schemas.CreatePost, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # post_created = cur.execute(\"\"\"INSERT INTO posts (title, content, published) VALUES (%s, %s, %s) RETURNING *\"\"\",(post.title,post.content,post.published)).fetchone()",
         "detail": "app.routers.posts",
         "documentation": {}
     },
@@ -514,7 +665,7 @@
         "kind": 2,
         "importPath": "app.routers.posts",
         "description": "app.routers.posts",
-        "peekOfCode": "def get_latest_post(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # curr = conn.cursor(row_factory=dict_row)\n    # latest_post = curr.execute(\"\"\"SELECT * FROM posts ORDER BY created_at DESC LIMIT 1\"\"\").fetchone()\n    # conn.commit()\n    latest_post = db.query(models.Post).order_by(models.Post.created_at.desc()).first()\n    return latest_post\n@router.get(\"/{id}\", response_model= schemas.Post)\ndef get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # required_post = cur.execute(\"\"\"SELECT * FROM posts WHERE id = %s \"\"\", (str(id),)).fetchone()",
+        "peekOfCode": "def get_latest_post(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # curr = conn.cursor(row_factory=dict_row)\n    # latest_post = curr.execute(\"\"\"SELECT * FROM posts ORDER BY created_at DESC LIMIT 1\"\"\").fetchone()\n    # conn.commit()\n    latest_post = db.query(models.Post).order_by(models.Post.created_at.desc()).first()\n    return latest_post\n@router.get(\"/{id}\", response_model= schemas.PostOut)\ndef get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # required_post = cur.execute(\"\"\"SELECT * FROM posts WHERE id = %s \"\"\", (str(id),)).fetchone()",
         "detail": "app.routers.posts",
         "documentation": {}
     },
@@ -523,7 +674,7 @@
         "kind": 2,
         "importPath": "app.routers.posts",
         "description": "app.routers.posts",
-        "peekOfCode": "def get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # required_post = cur.execute(\"\"\"SELECT * FROM posts WHERE id = %s \"\"\", (str(id),)).fetchone()\n    required_post = db.query(models.Post).filter(models.Post.id == id).first()\n    if required_post == None:\n        raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= f\"The post with id: {id} is not found\")\n    return required_post\n@router.delete(\"/{id}\", status_code= status.HTTP_204_NO_CONTENT)\ndef delete_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)",
+        "peekOfCode": "def get_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):\n    # cur = conn.cursor(row_factory=dict_row)\n    # required_post = cur.execute(\"\"\"SELECT * FROM posts WHERE id = %s \"\"\", (str(id),)).fetchone()\n    required_post = db.query(models.Post, func.count(models.Vote.post_id).label(\"votes\")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True).group_by(models.Post.id).filter(models.Post.id == id).first()\n    print(db.query(models.Post, func.count(models.Vote.post_id).label(\"votes\")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True))\n    if required_post == None:\n        raise HTTPException(status_code= status.HTTP_404_NOT_FOUND, detail= f\"The post with id: {id} is not found\")\n    return required_post\n@router.delete(\"/{id}\", status_code= status.HTTP_204_NO_CONTENT)\ndef delete_post(id: int, db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user)):",
         "detail": "app.routers.posts",
         "documentation": {}
     },
@@ -550,7 +701,7 @@
         "kind": 5,
         "importPath": "app.routers.posts",
         "description": "app.routers.posts",
-        "peekOfCode": "router = APIRouter(\n    prefix= \"/posts\",\n    tags=[\"Posts\"]\n)\n@router.get(\"/\", response_model=List[schemas.Post])\ndef get_posts(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user), limit: int = 10, skip: int = 0, search: Optional[str] = \"\"):\n    # cur = conn.cursor(row_factory=dict_row)\n    # posts = cur.execute(\"\"\"SELECT * FROM posts\"\"\").fetchall()\n    posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()\n    return posts",
+        "peekOfCode": "router = APIRouter(\n    prefix= \"/posts\",\n    tags=[\"Posts\"]\n)\n@router.get(\"/\", response_model=List[schemas.PostOut])\ndef get_posts(db: Session = Depends(get_db), user:models.User = Depends(oath2.get_current_user), limit: int = 10, skip: int = 0, search: Optional[str] = \"\"):\n    # cur = conn.cursor(row_factory=dict_row)\n    # posts = cur.execute(\"\"\"SELECT * FROM posts\"\"\").fetchall()\n    # posts = db.query(models.Post).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()\n    result = db.query(models.Post, func.count(models.Vote.post_id).label(\"votes\")).join(models.Vote, models.Post.id == models.Vote.post_id, isouter= True).group_by(models.Post.id).filter(models.Post.title.contains(search)).limit(limit).offset(skip).all()",
         "detail": "app.routers.posts",
         "documentation": {}
     },
@@ -663,11 +814,11 @@
         "documentation": {}
     },
     {
-        "label": "get_message",
+        "label": "example",
         "kind": 2,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "def get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)\napp.include_router(votes.router)",
+        "peekOfCode": "def example():\n    return {\"message\" : \"hello\"}",
         "detail": "app.main",
         "documentation": {}
     },
@@ -676,7 +827,16 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef get_message():\n    return {\"message\": \"hello\"}\napp.include_router(posts.router)\napp.include_router(users.router)\napp.include_router(auth.router)\napp.include_router(votes.router)",
+        "peekOfCode": "app = FastAPI()\norigins = [\"https://www.google.com\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\napp.include_router(posts.router)",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "origins = [\"https://www.google.com\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\napp.include_router(posts.router)\napp.include_router(users.router)",
         "detail": "app.main",
         "documentation": {}
     },
@@ -829,7 +989,7 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)\nclass PostOut(BaseModel):\n    Post: Post",
         "detail": "app.schemas",
         "documentation": {}
     },
@@ -838,7 +998,7 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
+        "peekOfCode": "class TokenData(BaseModel):\n    id: Optional[int] = None\nclass Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)\nclass PostOut(BaseModel):\n    Post: Post\n    votes: int",
         "detail": "app.schemas",
         "documentation": {}
     },
@@ -847,7 +1007,16 @@
         "kind": 6,
         "importPath": "app.schemas",
         "description": "app.schemas",
-        "peekOfCode": "class Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)",
+        "peekOfCode": "class Vote(BaseModel):\n    post_id: int\n    dir: conint(le=1, ge=0)\nclass PostOut(BaseModel):\n    Post: Post\n    votes: int",
+        "detail": "app.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PostOut",
+        "kind": 6,
+        "importPath": "app.schemas",
+        "description": "app.schemas",
+        "peekOfCode": "class PostOut(BaseModel):\n    Post: Post\n    votes: int",
         "detail": "app.schemas",
         "documentation": {}
     },
